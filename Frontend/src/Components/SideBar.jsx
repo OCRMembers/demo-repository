@@ -19,7 +19,7 @@ export default function SideBar() {
       <aside className="">
         <div className="h-screen grid grid-cols-[auto_1fr]">
           <div className="bg-[#181E34] flex flex-col fixed w-14 h-full">
-            <div className="w-full mt-4">
+            <div className="w-full mt-4 md:hidden">
               <GiHamburgerMenu
                 className="m-auto size-10 p-1 border"
                 onClick={handleHide}
