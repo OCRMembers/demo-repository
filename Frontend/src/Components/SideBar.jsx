@@ -11,14 +11,14 @@ import { useState } from "react";
 import { ImCross } from "react-icons/im";
 
 export default function SideBar() {
-    const [hide, setHide] = useState(false);
+    const [hide, setHide] = useState(true);
     function handleHide() {
       setHide((hide) => !hide);
     }
     return (
       <aside className="">
-        <div className="w-screen h-screen grid grid-cols-[auto_1fr]">
-          <div className="bg-[#181E34] flex flex-col sticky top-0 w-14 h-full">
+        <div className="h-screen grid grid-cols-[auto_1fr]">
+          <div className="bg-[#181E34] flex flex-col fixed w-14 h-full">
             <div className="w-full mt-4">
               <GiHamburgerMenu
                 className="m-auto size-10 p-1 border"
@@ -40,11 +40,11 @@ export default function SideBar() {
             <div className="w-full border-y-2 border-white p-4">
               <BiAnalyse className="text-white size-5 m-auto" />
             </div>
-            <div className="bg-[#323A56] w-full p-4 absolute bottom-0 left-0">
+            <div className="bg-[#323A56] w-14 p-4 absolute bottom-0 left-0">
               <IoMdHelpCircleOutline className="text-white size-5 m-auto" />
             </div>
           </div>
-          <div className={`bg-white z-10 h-full flex flex-col ${hide ? "hidden" : ""}`}>
+          <div className={`bg-white w-screen h-full flex flex-col ml-14 ${hide ? "hidden" : ""}`}>
             <div className="flex justify-between items-center m-4 mb-0 text-[#417EE9]">
               <h2 className="text-xl">DataSight</h2>
               <ImCross className="size-6" onClick={handleHide}/>
