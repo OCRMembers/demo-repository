@@ -3,3 +3,6 @@ torch
 opencv-python 
 pandas 
 numpy  
+flask
+flask_cors
+scipy
