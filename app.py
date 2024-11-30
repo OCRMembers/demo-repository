@@ -105,7 +105,7 @@ def create_ascii_grid(output_path, matched_depths):
 # Field: 4 column
 # Field: 5 row
 # Projection: Local Rectangular
-# Units: meters
+# Units: pixels
 # End:
 """
         data_lines = []
